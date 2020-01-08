@@ -5,6 +5,7 @@ import routes from './routes';
 import plugins from './plugins';
 
 const port: number = config.get('server.port');
+
 export const server: Server = new Server({
   port,
   routes: {
@@ -23,9 +24,4 @@ export const init = async (_server: Server) => {
 
   await _server.start();
   _server.log(['info'], `Listening :${port}...`);
-};
-
-export default {
-  server,
-  init
 };
