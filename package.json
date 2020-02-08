@@ -16,7 +16,10 @@
     "config": "^3.2.4",
     "good": "^8.1.2",
     "good-console": "^8.0.0",
-    "good-squeeze": "^5.1.0"
+    "good-squeeze": "^5.1.0",
+    "hapi-auth-jwt2": "^8.8.1",
+    "joi": "^14.3.1",
+    "jwks-rsa": "^1.6.2"
   },
   "devDependencies": {
     "@types/config": "^0.0.36",
