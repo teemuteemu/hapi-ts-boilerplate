@@ -6,4 +6,9 @@ export default [
     path: '/',
     handler: handlers.index
   },
+  {
+    method: 'GET',
+    path: '/health',
+    handler: handlers.health
+  },
 ];

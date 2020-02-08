@@ -8,13 +8,24 @@ afterAll(async () => {
   await server.stop();
 });
 
-test('should return yo', async () => {
-  const query = {
+test('health check', async () => {
+  const request = {
+    method: 'GET',
+    url: '/health'
+  };
+  const response = await server.inject(request);
+
+  expect(response.statusCode).toBe(200);
+  expect(response.result).toEqual({ result: 'healthy' });
+});
+
+test('should return foo', async () => {
+  const request = {
     method: 'GET',
     url: '/'
   };
-  const data = await server.inject(query);
+  const response = await server.inject(request);
 
-  expect(data.statusCode).toBe(200);
-  expect(data.result).toEqual({ result: 'foo' });
+  expect(response.statusCode).toBe(200);
+  expect(response.result).toEqual({ result: 'foo' });
 });
