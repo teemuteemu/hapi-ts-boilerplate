@@ -16,5 +16,5 @@ test('should return yo', async () => {
   const data = await server.inject(query);
 
   expect(data.statusCode).toBe(200);
-  expect(data.result).toEqual({ result: 'yo' });
+  expect(data.result).toEqual({ result: 'foo' });
 });
