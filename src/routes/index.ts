@@ -4,11 +4,16 @@ export default [
   {
     method: 'GET',
     path: '/',
-    handler: handlers.index
+    config: handlers.index
   },
   {
     method: 'GET',
     path: '/health',
-    handler: handlers.health
+    config: handlers.health
   },
+  {
+    method: 'POST',
+    path: '/dummy',
+    config: handlers.dummyPost
+  }
 ];
